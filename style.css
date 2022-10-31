@@ -44,6 +44,7 @@ main {
 }
 
 .content {
+    position: relative;
     background-color: hsl(216, 50%, 16%);
     border-radius: 15px;
     align-items: center;
@@ -51,7 +52,8 @@ main {
     justify-items: center;
 }
 
-div img {
+.content img {
+    opacity: 1;
     width: 20rem;
     margin: 1.5rem;
     border-radius: 10px;
@@ -108,6 +110,25 @@ div img {
     border: .1rem solid #283A52;
 }
 
+.image-overlay {
+    background-color: #00FFF9;
+    display: flex;
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    width: 20rem;
+    height: 20rem;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.image-overlay img {
+    width: 3rem;
+}
+
 /* Text */
 
 h1 {
@@ -134,4 +155,25 @@ p {
 
 .creator p {
     margin-top: 0.4rem;
+}
+
+/* Hover */
+
+.nft-image:hover {
+    opacity: 0.4;
+}
+
+.image-overlay:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.nft-name:hover {
+    color: #00FFF9;
+    cursor: pointer;
+}
+
+.creator-name:hover {
+    color: #00FFF9;
+    cursor: pointer;
 }
